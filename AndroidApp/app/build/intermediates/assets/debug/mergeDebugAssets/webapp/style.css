@@ -1,0 +1,375 @@
+/*
+ * Basic styling for the 10K training tracker web application.
+ */
+
+:root {
+  --primary-color: #007BFF;
+  --primary-color-hover: #0056b3;
+  --secondary-color: #6C757D;
+  --secondary-color-hover: #545b62;
+  --success-color: #28A745;
+  --danger-color: #DC3545;
+  --background-color: #F5F7FA;
+  --card-background: #FFFFFF;
+  --text-color: #212529;
+  --muted-color: #6C757D;
+  --border-radius: 4px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+header.app-header {
+  background-color: var(--card-background);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header.app-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  color: var(--muted-color);
+  font-size: 0.95rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  max-width: 850px;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color-hover);
+}
+
+.hidden {
+  display: none;
+}
+
+.status {
+  font-style: italic;
+  color: var(--danger-color);
+}
+
+.progress-section {
+  max-width: 850px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
+}
+
+.progress-label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #E9ECEF;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-image: linear-gradient(90deg, var(--primary-color), var(--success-color));
+  border-radius: var(--border-radius);
+  transition: width 0.4s ease;
+}
+
+.plan-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 0.5rem 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  min-width: 700px;
+}
+
+.plan-table th,
+.plan-table td {
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.25rem;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.plan-table th {
+  background-color: #f1f3f5;
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.plan-table th:first-child {
+  width: 60px;
+  min-width: 60px;
+}
+
+.plan-table td {
+  background-color: #ffffff;
+  position: relative;
+  min-width: 90px;
+  width: auto;
+}
+
+.plan-table td .cell-content {
+  min-height: 35px;
+  outline: none;
+  width: 100%;
+  display: block;
+  cursor: text;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  padding-right: 25px;
+  box-sizing: border-box;
+}
+
+.plan-table td .cell-content:focus {
+  background-color: #fdfd96;
+}
+
+.plan-table td.completed .cell-content {
+  text-decoration: line-through;
+  color: var(--success-color);
+}
+
+.plan-table td .checkbox-wrapper {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+
+.plan-table td input[type="checkbox"] {
+  transform: scale(1.0);
+  cursor: pointer;
+}
+
+.workouts-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.workouts-section h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.workout-block + .workout-block {
+  margin-top: 1rem;
+}
+
+.workout-block h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.workout-block ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.workout-block li {
+  margin-bottom: 0.3rem;
+}
+
+.workout-block li a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.workout-block li a:hover {
+  text-decoration: underline;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--muted-color);
+  font-size: 0.85rem;
+}
+
+.muted {
+  color: var(--muted-color);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .plan-container {
+    padding: 0 0.25rem 2rem;
+  }
+  
+  .plan-table {
+    min-width: 600px;
+    font-size: 0.75rem;
+  }
+  
+  .plan-table th,
+  .plan-table td {
+    padding: 0.25rem 0.15rem;
+    font-size: 0.7rem;
+  }
+  
+  .plan-table th {
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
+  
+  .plan-table th:first-child {
+    width: 50px;
+    min-width: 50px;
+    font-size: 0.65rem;
+  }
+  
+  .plan-table td {
+    min-width: 80px;
+  }
+  
+  .plan-table td .cell-content {
+    min-height: 30px;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    padding-right: 20px;
+  }
+  
+  .plan-table td .checkbox-wrapper {
+    bottom: 1px;
+    right: 1px;
+  }
+  
+  .plan-table td input[type="checkbox"] {
+    transform: scale(0.8);
+  }
+  
+  .btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .workouts-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .workout-block h3 {
+    font-size: 1rem;
+  }
+  
+  .header.app-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .tagline {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-table {
+    min-width: 550px;
+  }
+  
+  .plan-table th,
+  .plan-table td {
+    padding: 0.2rem 0.1rem;
+    font-size: 0.65rem;
+  }
+  
+  .plan-table th:first-child {
+    width: 45px;
+    min-width: 45px;
+    font-size: 0.6rem;
+  }
+  
+  .plan-table td {
+    min-width: 75px;
+  }
+  
+  .plan-table td .cell-content {
+    min-height: 25px;
+    font-size: 0.65rem;
+    line-height: 1.1;
+    padding-right: 18px;
+  }
+  
+  .controls {
+    gap: 0.5rem;
+    margin: 0.75rem auto;
+  }
+  
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+  
+  header.app-header {
+    padding: 1rem 0.5rem;
+  }
+  
+  header.app-header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .tagline {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,18 @@
+// Top-level build file for the Android project.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Update the version according to your installed Android Gradle Plugin version.
+        classpath 'com.android.tools.build:gradle:8.6.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

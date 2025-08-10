@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10K Beginner Training Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>10K Beginner Training Tracker</h1>
+    <p class="tagline">Follow the plan, customise your routine and watch your progress grow.</p>
+  </header>
+
+  <section class="controls">
+    <button id="pauseBtn" class="btn">Pause Training</button>
+    <span id="pauseStatus" class="status hidden">Training Paused</span>
+    <button id="resetBtn" class="btn btn-secondary">Reset Progress</button>
+  </section>
+
+  <section id="progress-container" class="progress-section">
+    <div id="progress-label" class="progress-label">0% complete</div>
+    <div id="progress-bar" class="progress-bar">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+  </section>
+
+  <main id="plan-container" class="plan-container"></main>
+
+  <section id="workouts" class="workouts-section">
+    <h2>Workouts &amp; Warm‑Up</h2>
+    <div id="warmup-routine" class="workout-block"></div>
+    <div id="workout1" class="workout-block"></div>
+    <div id="workout2" class="workout-block"></div>
+    <div id="workout3" class="workout-block"></div>
+    <div id="foamrolling" class="workout-block"></div>
+  </section>
+
+  <footer class="app-footer">
+    <p>&copy; 2025 10K Training Plan</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
